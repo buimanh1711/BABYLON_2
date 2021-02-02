@@ -129,7 +129,7 @@ class Model {
         room.dots.products.forEach((product, index) => {
           product.forEach((item, index2) => {
             let renderPosProduct = this.getRenderPos(item);
-            let currentDotProduct = document.getElementById(`room${roomId + 1}_product_${index+1}_${index2+1}`);
+            let currentDotProduct = document.getElementById(`room${roomId + 1}_product_${index + 1}_${index2 + 1}`);
             currentDotProduct.style = `top: ${renderPosProduct.y}px; left: ${renderPosProduct.x}px`
           })
         });
@@ -141,12 +141,12 @@ class Model {
   }
 
   createScene() {
-    if(window.innerWidth < 768) {
+    if (window.innerWidth < 768) {
       this.camera.attachControl(this.canvas, true);
-      }
+    }
     this.scene.ambientColor = new BABYLON.Color3(1, 1, 1);
     this.light = new BABYLON.HemisphericLight("Hemis", new BABYLON.Vector3(1000, 1000, 1000), this.scene);
-    this.light.diffuse = new BABYLON.Color3(0.64, 0.64, 0.32);
+    this.light.diffuse = new BABYLON.Color3(1, 1, 1);
     this.light.intensity = 0.9;
 
     BABYLON.SceneLoader.ImportMesh("", "./model/model1/", "gift_giving.gltf", this.scene, (meshes, particleSystems, skeletons, animationGroups) => {
@@ -510,13 +510,27 @@ class Model {
 
   openPop(product) {
     console.log('run')
-    popup.classList.remove('hidden');
+    popupContainer.classList.remove('hidden');
     let content =
       `
-      <h1>${product.name}</h1>
-      <h1>${product.price}<h1>
+      <div class="detail-header">
+      
+      <h1 class='product-name'>
+        ${product.name}
+      </h1>
+    </div>
+    <div class='product-img-container'>
+      <img src='${product.img}' />
+    </div>
+    <p class="product-price">
+      ${product.price}$
+    </p>
+    <p class="product-description">
+      ${product.description}
+    </p>
+    <a class='shop' href='https://vgasport.vgasoft.vn/'>Shop</a>
     `
-    popupCt.innerHTML = content;
+    popupContent.innerHTML = content;
 
   }
 

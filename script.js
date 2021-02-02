@@ -41,12 +41,12 @@ const room2_product_2 = Array.from(document.getElementsByClassName('room2_produc
 
 const room3_product_1 = Array.from(document.getElementsByClassName('room3_product_1'));
 
-const popup = document.getElementById('popup');
-const popupCls = document.getElementById('popup-btn');
-const popupCt = document.getElementById('popup-content');
+const popupContainer = document.getElementById('popup-container');
+const popupContent = document.getElementById('popup');
+const popupCls = document.getElementById('back-btn');
 
 popupCls.addEventListener('click', () => {
-  popup.classList.add('hidden')
+  popupContainer.classList.add('hidden')
 })
 
 var dotSize = 1;

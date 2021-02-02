@@ -21,12 +21,15 @@
 </head>
 
 <body>
+
+
   <div id='container'>
-    <div id='popup' class='popup hidden'>
-      <div id='popup-btn' class='back-btn'>
-        <i class="fas fa-arrow-left"></i>
+    <div id='popup-container' class="detail_product-container hidden">
+      <div id='popup' class='popup-content '>
       </div>
-      <div id='popup-content'></div>
+      <button id='back-btn' class='back-btn'>
+        <i class="fas fa-arrow-left"></i>
+      </button>
     </div>
     <div class="control-container">
       <button class='control-btn' id='rotate-left'>
@@ -39,7 +42,7 @@
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
-    <div  id='loading-icon' class="loading-container">
+    <div id='loading-icon' class="loading-container">
       <div class="spinner-grow text-light" id='loading-icon' role="status">
         <span class="visually"></span>
       </div>
