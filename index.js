@@ -285,7 +285,7 @@ class Model {
             })
           } else {
             console.log('manh');
-
+            this.camera.position = new BABYLON.Vector3(vertices[this.roomIndex].init.x, vertices[this.roomIndex].init.y, vertices[this.roomIndex].init.z)
             this.roomIndex = this.roomIndex < 2 ? this.roomIndex + 1 : 0;
             this.hideDotsZoom(0);
             this.hideDotsZoom(1);
@@ -318,7 +318,7 @@ class Model {
             })
           } else {
             console.log('manh');
-
+            this.camera.position = new BABYLON.Vector3(vertices[this.roomIndex].init.x, vertices[this.roomIndex].init.y, vertices[this.roomIndex].init.z)
             this.roomIndex = this.roomIndex > 0 ? this.roomIndex - 1 : 2;
             this.hideDotsZoom(0);
             this.hideDotsZoom(1);
