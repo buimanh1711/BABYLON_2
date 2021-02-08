@@ -141,9 +141,9 @@ class Model {
   }
 
   createScene() {
-    // if (window.innerWidth < 768) {
-    //   this.camera.attachControl(this.canvas, true);
-    // }
+    if (window.innerWidth < 768) {
+      this.camera.attachControl(this.canvas, true);
+    }
     this.scene.ambientColor = new BABYLON.Color3(1, 1, 1);
     this.light = new BABYLON.HemisphericLight("Hemis", new BABYLON.Vector3(1000, 1000, 1000), this.scene);
     this.light.diffuse = new BABYLON.Color3(1, 1, 1);
