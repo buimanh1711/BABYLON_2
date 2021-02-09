@@ -1,9 +1,10 @@
 body {
   overflow: hidden;
+  margin: 0 auto;
 }
 
 canvas {
-  width: 100%:
+  width: 100%;
 }
 .loading-container {
   position: fixed;

@@ -64,3 +64,5 @@ const changeDotsSize = () => {
     changeDotsSize();
   }, 60);
 }
+
+changeDotsSize();
